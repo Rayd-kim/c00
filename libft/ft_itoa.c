@@ -6,59 +6,72 @@
 /*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 17:14:15 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 17:34:40 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/17 18:14:38 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+char	*ch_num(char *str, int count, unsigned int num, int sign)
+{
+	int	i;
+
+	i = 0;
+	if (sign == 0)
+	{
+		while (i < count)
+		{
+			str[count - i - 1] = num % 10 + '0';
+			num = num / 10;
+			i++;
+		}
+		str[count] = '\0';
+	}
+	else
+	{
+		str[0] = '-';
+		while (i < count)
+		{
+			str[count - i] = num % 10 + '0';
+			num = num / 10;
+			i++;
+		}
+		str[count + 1] = '\0';
+	}
+	return (str);
+}
+
+int	num_count(unsigned int n)
+{
+	int	count;
+
+	count = 1;
+	while (n > 10)
+	{
+		count++;
+		n = n / 10;
+	}
+	return (count);
+}
 
 char	*ft_itoa(int n)
 {
-	int			count;
-	int			sign;
-	long int	num1;
-	long int	num2;
-	char		*arr;
-	int			i;
+	int				count;
+	int				sign;
+	unsigned int	num1;
+	char			*arr;
 
-	count = 0;
 	sign = 0;
-	if (n == 0)
-		count = 1;
 	if (n < 0)
 	{
 		sign = 1;
 		num1 = -n;
 	}
-	num1 = n;
-	num2 = num1;
-	while (num2 % 10 > 0)
-	{
-		count++;
-		num2 = num2 / 10;
-	}
+	else
+		num1 = n;
+	count = num_count(num1);
 	arr = (char *)malloc(sizeof(char) * (count + sign + 1));
 	if (arr == 0)
 		return (NULL);
-	i = 1;
-	while (i < count)
-	{
-		arr[count - i] = num1 % 10 + '0';
-		num1 = num1 / 10;
-		i++;
-	}
-	arr[count] = '\0';
+	arr = ch_num(arr, count, num1, sign);
 	return (arr);
 }
-
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%s\n", ft_itoa(1));
-	//printf("%s\n", ft_itoa(-1));
-	printf("%s\n", ft_itoa(0));
-	//printf("%s\n", ft_itoa(-2147483648));
-	return 0;
-}
-
