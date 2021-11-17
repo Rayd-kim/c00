@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalnum.c                                          :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 12:21:07 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/16 12:21:12 by youskim          ###   ########.fr       */
+/*   Created: 2021/11/17 13:35:47 by youskim           #+#    #+#             */
+/*   Updated: 2021/11/17 14:32:30 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+int	ft_toupper(int c)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') \
-		|| (c >= 'A' && c <= 'Z'))
-		return (1);
+	unsigned char	k;
+
+	k = c;
+	if (k >= 'a' && k <= 'z')
+		return (c - 32);
 	else
-		return (0);
+		return (c);
 }

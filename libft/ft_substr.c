@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 12:20:52 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/16 12:20:55 by youskim          ###   ########.fr       */
+/*   Created: 2021/11/17 16:09:31 by youskim           #+#    #+#             */
+/*   Updated: 2021/11/17 16:13:35 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 
-void	ft_bzero(void *s, int n)
-{	
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*arr;
 	int		i;
-	unsigned char	*str;
 
+	arr = (char *)malloc(sizeof(char) * (len + 1));
+	if (arr == 0)
+		return (NULL);
 	i = 0;
-	str = s;
-	while (i < n)
+	while (s[start] != '\0' && i < len)
 	{
-		str[i] = 0;
+		arr[i] = s[start];
 		i++;
+		start++;
 	}
-	return (str);
+	arr[i] = '\0';
+	return (arr);
 }

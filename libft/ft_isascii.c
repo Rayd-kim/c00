@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isascii.c                                          :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 12:21:43 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/16 12:21:45 by youskim          ###   ########.fr       */
+/*   Created: 2021/11/17 14:44:16 by youskim           #+#    #+#             */
+/*   Updated: 2021/11/17 14:44:22 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,4 @@ int	ft_isascii(int c)
 		return (1);
 	else
 		return (0);
-}
-
-#include <stdio.h>
-#include <ctype.h>
-
-int main()
-{
-	printf("%d\n", ft_isascii(128));
-	printf("%d\n\n", isascii(128));
-	printf("%d\n", ft_isascii(-1));
-	printf("%d\n\n", isascii(-1));
-	printf("%d\n", ft_isascii(200));
-	printf("%d\n\n", isascii(200));
-	return 0;
 }

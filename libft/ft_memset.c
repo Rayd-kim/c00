@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <student.42seoul.kr>               +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 12:22:24 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/16 12:50:16 by youskim          ###   ########.fr       */
+/*   Created: 2021/11/17 14:45:05 by youskim           #+#    #+#             */
+/*   Updated: 2021/11/17 15:00:57 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *b, int c, unsigned int n)
+void	*ft_memset(void *b, int c, size_t n)
 {
 	unsigned char	a;
 	unsigned char	*str;
-	int		i;
+	int				i;
 
 	a = c;
 	str = b;

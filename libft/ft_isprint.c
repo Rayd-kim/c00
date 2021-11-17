@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 12:21:23 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/16 12:21:26 by youskim          ###   ########.fr       */
+/*   Created: 2021/11/17 14:44:40 by youskim           #+#    #+#             */
+/*   Updated: 2021/11/17 14:44:41 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int a)
+int	ft_isprint(int c)
 {
-	if (a >= 'A' && a <= 'Z')
-		return (1);
-	else if (a >= 'a' && a <= 'z')
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
