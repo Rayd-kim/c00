@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 17:14:15 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 18:14:38 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/18 13:09:38 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
 char	*ch_num(char *str, int count, unsigned int num, int sign)
 {
 	int	i;
@@ -45,7 +46,7 @@ int	num_count(unsigned int n)
 	int	count;
 
 	count = 1;
-	while (n > 10)
+	while (n >= 10)
 	{
 		count++;
 		n = n / 10;

@@ -6,7 +6,7 @@
 /*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 14:31:04 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 15:00:12 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/18 13:14:44 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (ptr);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -41,3 +41,4 @@ int	main(void)
 	printf("%s\n", ptr2);
 	return 0;
 }
+*/

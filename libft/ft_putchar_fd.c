@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 14:45:14 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/18 23:11:49 by youskim          ###   ########.fr       */
+/*   Created: 2021/11/18 12:31:02 by youskim           #+#    #+#             */
+/*   Updated: 2021/11/18 23:06:29 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *str, int c)
-{
-	int		i;
-	char	k;
+#include <unistd.h>
 
-	i = 0;
-	k = c;
-	while (str[i] != '\0')
-	{
-		if (str[i] == k)
-		{
-			return ((char *)&str[i]);
-		}
-		else
-			i++;
-	}
-	return (0);
+void	ft_putchar_fd(char c, int fd)
+{
+	write (fd, &c, 1);
 }

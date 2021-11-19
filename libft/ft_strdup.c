@@ -6,7 +6,7 @@
 /*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:42:59 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 15:55:10 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/18 13:13:40 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strdup(const char *str)
 	}
 	return (arr);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int	main(void)
@@ -45,3 +45,4 @@ int	main(void)
 	free(ptr2);
 	return 0;
 }
+*/

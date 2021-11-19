@@ -6,13 +6,15 @@
 /*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 14:43:46 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 14:43:49 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/19 12:21:33 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, int n)
+#include <string.h>
+
+void	ft_bzero(void *s, size_t n)
 {	
-	int				i;
+	size_t			i;
 	unsigned char	*str;
 
 	i = 0;

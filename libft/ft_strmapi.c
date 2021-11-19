@@ -6,7 +6,7 @@
 /*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 18:17:25 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 18:18:40 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/19 13:26:56 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	char	*arr;
+	int	i;
 
+	
