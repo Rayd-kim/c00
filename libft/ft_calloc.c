@@ -6,7 +6,7 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:56:25 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/19 13:24:03 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/19 23:20:38 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int		i;
+	size_t	i;
 	char	*arr;
 
 	i = 0;

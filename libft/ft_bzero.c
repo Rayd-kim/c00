@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 14:43:46 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/19 12:21:33 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/19 19:12:13 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,4 @@ void	ft_bzero(void *s, size_t n)
 		str[i] = 0;
 		i++;
 	}
-	return (str);
 }

@@ -6,13 +6,13 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 13:33:14 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/19 12:26:02 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/19 21:23:05 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t	size_of_str(char *str)
+size_t	size_of_str(const char *str)
 {
 	size_t	length;
 
