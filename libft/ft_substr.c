@@ -6,7 +6,7 @@
 /*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:09:31 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 16:13:35 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 14:21:09 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*arr;
-	int		i;
+	size_t	i;
 
 	arr = (char *)malloc(sizeof(char) * (len + 1));
 	if (arr == 0)
