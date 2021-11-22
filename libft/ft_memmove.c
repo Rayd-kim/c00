@@ -6,7 +6,7 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 12:22:45 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/18 23:25:06 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 18:05:51 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	ds = (char *)dest;
 	s = (char *)src;
-	i = 0;
+	i = -1;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	if (ds <= s)
 	{
-		while (i < n)
-		{
+		while (++i < n)
 			ds[i] = s[i];
-			i++;
-		}
 	}
 	else
 	{

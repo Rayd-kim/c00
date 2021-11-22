@@ -3,19 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 13:35:47 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 14:32:30 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 17:23:27 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	unsigned char	k;
-
-	k = c;
-	if (k >= 'a' && k <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	else
 		return (c);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 14:31:04 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/18 13:14:44 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 17:31:24 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strrchr(const char *str, int c)
 			ptr = (char *)&str[i];
 		i++;
 	}
+	if (c == 0)
+		return ((char *)&str[i]);
 	return (ptr);
 }
 /*

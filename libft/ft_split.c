@@ -6,20 +6,20 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:49:53 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/18 23:12:33 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 23:55:06 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	check_count(char const *s, char c)
 {
-	int	i;
+	size_t	i;
 	int	n;
 
 	i = 0;
 	n = 0;
-	while (s[i] != '\0')
+	while (i < ft_strlen(s))
 	{
 		if (s[i] == c)
 			n++;
@@ -55,13 +55,13 @@ char	**ft_split(char const *s, char c)
 	int		k;
 	int		cycle;
 
-	count = check_count(s, c);
-	arr = (char **)malloc(sizeof(char *) * (count + 2));
+	count = check_count(s, c) + 1;
+	arr = (char **)malloc(sizeof(char *) * (count + 1));
 	if (arr == 0)
 		return (NULL);
 	i = 0;
 	k = 0;
-	while (i <= count)
+	while (i < count)
 	{
 		cycle = 0;
 		while (s[k] != c)

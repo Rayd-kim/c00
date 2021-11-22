@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:28:26 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 16:49:48 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 17:12:48 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	check_set(char c, char const *set)
 	return (0);
 }
 
-int	check_count(char const *s1, char const *set)
+int	ch_count(char const *s1, char const *set)
 {
 	int	n;
 	int	i;
@@ -49,7 +49,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	int		k;
 
-	count = check_count(s1, set);
+	count = ch_count(s1, set);
 	arr = (char *)malloc(sizeof(char) * (count + 1));
 	if (arr == 0)
 		return (NULL);

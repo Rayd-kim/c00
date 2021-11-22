@@ -6,7 +6,7 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 14:45:14 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/18 23:11:49 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 17:27:54 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,7 @@ char	*ft_strchr(const char *str, int c)
 		else
 			i++;
 	}
+	if (c == 0)
+		return ((char *)&str[i]);
 	return (0);
 }
