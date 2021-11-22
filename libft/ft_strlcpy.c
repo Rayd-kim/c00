@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 13:31:25 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 13:32:02 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 14:06:05 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	length(char *str)
+#include <string.h>
+
+size_t	length(const char *str)
 {
-	int	k;
+	size_t	k;
 
 	k = 0;
 	while (str[k])
@@ -20,12 +22,14 @@ int	length(char *str)
 	return (k);
 }
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	while (i < size - 1)
+	if (size == 0)
+		return (length(src));
+	while (i < size - 1 && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;

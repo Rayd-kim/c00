@@ -3,19 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 13:37:55 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 14:32:12 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 17:23:16 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	unsigned char	k;
-
-	k = c;
-	if (k >= 'A' && k <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	else
 		return (c);

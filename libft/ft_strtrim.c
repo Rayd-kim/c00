@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:28:26 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 16:49:48 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 17:12:48 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	check_set(char c, char const *set)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (set[i] != '\0')
+	while (i < ft_strlen(set))
 	{
 		if (c == set[i])
 			return (1);
@@ -26,44 +26,60 @@ int	check_set(char c, char const *set)
 	return (0);
 }
 
-int	check_count(char const *s1, char const *set)
+int	first_len(char const *s1, char const *set)
 {
-	int	n;
-	int	i;
+	size_t	i;
 
-	n = 0;
 	i = 0;
-	while (s1[i] != '\0')
-	{
-		if (check_set(s1[i], set) == 0)
-			n++;
+	while (check_set(s1[i], set) == 1)
 		i++;
+	return (i);
+}
+
+int	end_len(char const *s1, char const *set)
+{
+	size_t	k;
+	int		count;
+
+	k = ft_strlen(s1);
+	count = 0;
+	if (k == 0)
+		return (count);
+	else
+	{
+		while (check_set(s1[k - 1], set) == 1)
+		{
+			count++;
+			k--;
+		}
 	}
-	return (n);
+	return (count);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*arr;
-	int		count;
-	int		i;
-	int		k;
+	char		*arr;
+	int			count;
+	int			i;
+	size_t		first;
+	size_t		end;
 
-	count = check_count(s1, set);
+	first = first_len(s1, set);
+	end = end_len(s1, set);
+	if (first == ft_strlen(s1))
+		count = 0;
+	else
+		count = ft_strlen(s1) - first - end;
 	arr = (char *)malloc(sizeof(char) * (count + 1));
 	if (arr == 0)
 		return (NULL);
 	i = 0;
-	k = 0;
-	while (k < count && s1[i] != '\0')
+	while (i < count)
 	{
-		if (check_set(s1[i], set) == 0)
-		{
-			arr[k] = s1[i];
-			k++;
-		}
+		arr[i] = s1[first];
 		i++;
+		first++;
 	}
-	arr[k] = '\0';
+	arr[i] = '\0';
 	return (arr);
 }

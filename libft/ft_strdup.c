@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:42:59 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 15:55:10 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 17:30:14 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,10 @@ char	*ft_strdup(const char *str)
 		arr[len] = str[len];
 		len++;
 	}
+	arr[len] = '\0';
 	return (arr);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int	main(void)
@@ -45,3 +46,4 @@ int	main(void)
 	free(ptr2);
 	return 0;
 }
+*/

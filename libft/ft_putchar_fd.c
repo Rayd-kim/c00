@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 14:45:05 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/21 21:25:16 by youskim          ###   ########.fr       */
+/*   Created: 2021/11/18 12:31:02 by youskim           #+#    #+#             */
+/*   Updated: 2021/11/18 23:06:29 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <unistd.h>
 
-void	*ft_memset(void *b, int c, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned char	a;
-	unsigned char	*str;
-	size_t			i;
-
-	a = c;
-	str = b;
-	i = 0;
-	while (i < n)
-	{
-		str[i] = a;
-		i++;
-	}
-	return (str);
+	write (fd, &c, 1);
 }

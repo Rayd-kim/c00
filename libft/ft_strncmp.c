@@ -3,27 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 13:32:41 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 13:32:53 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 22:25:44 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	unsigned int	i;
+#include <string.h>
 
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t			i;
+	unsigned char	*a1;
+	unsigned char	*a2;
+
+	a1 = (unsigned char *)s1;
+	a2 = (unsigned char *)s2;
 	i = 0;
-	while (i < n && s2[i])
+	while (i < n && a2[i] != '\0')
 	{
-		if (s1[i] == s2[i])
-			i++;
-		else
-			return (s1[i] - s2[i]);
+		if (a1[i] != a2[i])
+			return (a1[i] - a2[i]);
+		i++;
 	}
-	if (i == n || s1[i] == '\0')
+	if (i == n || a1[i] == '\0')
 		return (0);
 	else
-		return (s1[i]);
+		return (a1[i]);
 }

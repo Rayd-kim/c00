@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 13:33:14 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 13:33:29 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/19 21:23:05 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	size_of_str(char *str)
+#include <string.h>
+
+size_t	size_of_str(const char *str)
 {
-	unsigned int	length;
+	size_t	length;
 
 	length = 0;
 	while (str[length])
@@ -20,11 +22,11 @@ unsigned int	size_of_str(char *str)
 	return (length);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	src_size;
-	unsigned int	dest_size;
+	size_t	i;
+	size_t	src_size;
+	size_t	dest_size;
 
 	i = 0;
 	src_size = size_of_str(src);

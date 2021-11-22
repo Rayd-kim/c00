@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youskim <youskim@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:13:44 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/17 16:28:04 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/21 17:41:33 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
 char	*ft_strcpy(char const *s1, char *arr, int start, int len)
 {
 	int	i;
