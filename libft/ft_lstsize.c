@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 21:40:33 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/22 17:53:31 by youskim          ###   ########.fr       */
+/*   Created: 2021/11/22 18:25:47 by youskim           #+#    #+#             */
+/*   Updated: 2021/11/22 18:31:10 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+int	ft_lstsize(t_list *lst)
 {
-	unsigned int	i;
+	int	size;
+	t_list	*temp;
 
-	i = 0;
-	while (s[i] != '\0')
+	temp = (t_list *)malloc(sizeof(t_list));
+	if (temp == 0)
+		return (NULL);
+	temp->next = lst->next;
+	size = 0;
+	while (temp->next != NULL)
 	{
-		f(i, &s[i]);
-		i++;
-	}
-}
+		size++;
+		temp = 
+
