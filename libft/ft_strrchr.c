@@ -6,7 +6,7 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 14:31:04 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/21 17:31:24 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/25 17:55:38 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,3 @@ char	*ft_strrchr(const char *str, int c)
 		return ((char *)&str[i]);
 	return (ptr);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	const char *str = "abcadef";
-	int	c = 'a';
-	char *ptr1 = strrchr(str, c);
-	char *ptr2 = ft_strrchr(str, c);
-	printf("%s\n", ptr1);
-	printf("%s\n", ptr2);
-	return 0;
-}
-*/

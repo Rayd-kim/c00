@@ -6,7 +6,7 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:28:26 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/21 17:12:48 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/24 21:05:50 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,19 +65,20 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t		end;
 
 	first = first_len(s1, set);
-	end = end_len(s1, set);
 	if (first == ft_strlen(s1))
 		count = 0;
 	else
+	{
+		end = end_len(s1, set);
 		count = ft_strlen(s1) - first - end;
+	}
 	arr = (char *)malloc(sizeof(char) * (count + 1));
 	if (arr == 0)
 		return (NULL);
-	i = 0;
-	while (i < count)
+	i = -1;
+	while (++i < count)
 	{
 		arr[i] = s1[first];
-		i++;
 		first++;
 	}
 	arr[i] = '\0';

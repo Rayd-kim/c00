@@ -6,21 +6,11 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 13:33:14 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/19 21:23:05 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/24 21:13:59 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-size_t	size_of_str(const char *str)
-{
-	size_t	length;
-
-	length = 0;
-	while (str[length])
-		length++;
-	return (length);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -29,8 +19,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	dest_size;
 
 	i = 0;
-	src_size = size_of_str(src);
-	dest_size = size_of_str(dest);
+	src_size = ft_strlen(src);
+	dest_size = ft_strlen(dest);
 	if (size <= dest_size)
 		return (size + src_size);
 	while (src[i] && i + 1 + dest_size < size)

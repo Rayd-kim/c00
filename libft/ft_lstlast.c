@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 13:43:33 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/23 13:43:36 by youskim          ###   ########.fr       */
+/*   Created: 2021/11/24 21:30:35 by youskim           #+#    #+#             */
+/*   Updated: 2021/11/25 17:13:51 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	else
-		return (0);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

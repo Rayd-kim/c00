@@ -15,6 +15,10 @@ FILE = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
        ft_itoa.c ft_strmapi.c \
        ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
+B_FILE = ft_lstnew.c ft_lstadd_front.c
+
+B_OBJS = $(B_FILE:.c=.o)
+
 OBJS = $(FILE:.c=.o)
 
 all : $(NAME)
@@ -24,6 +28,12 @@ $(OBJS) : $(FILE)
 
 $(NAME) : $(OBJS)
 	ar rcs $@ $^
+
+bonus : $(B_OBJS)
+
+$(B_OBJS) : $(B_FILE)
+	$(CC) $(W) -c $^
+
 
 clean:
 	rm -f *.o

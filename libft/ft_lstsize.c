@@ -6,22 +6,21 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 18:25:47 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/22 18:31:10 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/25 17:14:28 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_lstsize(t_list *lst)
 {
-	int	size;
-	t_list	*temp;
-
-	temp = (t_list *)malloc(sizeof(t_list));
-	if (temp == 0)
-		return (NULL);
-	temp->next = lst->next;
+	int		size;
+	
 	size = 0;
-	while (temp->next != NULL)
+	while (lst != NULL)
 	{
+		lst = lst->next;
 		size++;
-		temp = 
-
+	}
+	return (size);
+}
