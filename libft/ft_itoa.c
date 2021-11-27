@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-char	*ch_num(char *str, int count, unsigned int num, int sign)
+static char	*ch_num(char *str, int count, unsigned int num, int sign)
 {
 	int	i;
 
@@ -41,7 +41,7 @@ char	*ch_num(char *str, int count, unsigned int num, int sign)
 	return (str);
 }
 
-int	num_count(unsigned int n)
+static int	num_count(unsigned int n)
 {
 	int	count;
 

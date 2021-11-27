@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-char	*ft_strcpy(char const *s1, char *arr, int start, int len)
+static char	*ft_strcpy(char const *s1, char *arr, int start, int len)
 {
 	int	i;
 

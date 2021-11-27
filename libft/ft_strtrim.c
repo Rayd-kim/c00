@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	check_set(char c, char const *set)
+static int	check_set(char c, char const *set)
 {
 	size_t	i;
 
@@ -26,7 +26,7 @@ int	check_set(char c, char const *set)
 	return (0);
 }
 
-int	first_len(char const *s1, char const *set)
+static int	first_len(char const *s1, char const *set)
 {
 	size_t	i;
 
@@ -36,7 +36,7 @@ int	first_len(char const *s1, char const *set)
 	return (i);
 }
 
-int	end_len(char const *s1, char const *set)
+static int	end_len(char const *s1, char const *set)
 {
 	size_t	k;
 	int		count;

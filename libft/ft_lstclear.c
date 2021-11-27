@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/18 12:35:06 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/18 13:18:08 by youskim          ###   ########.fr       */
+/*   Created: 2021/11/27 14:32:08 by youskim           #+#    #+#             */
+/*   Updated: 2021/11/27 14:46:37 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	unsigned int	num;
-	int				sign;
-	char			c;
+	t_list	*temp;
+	t_list	*next_node;
 
-	sign = 0;
-	if (n < 0)
+	temp = *lst;
+	while (temp != NULL)
 	{
-		sign = 1;
-		num = -n;
-	}
-	else
-		num = n;
-	if (sign == 1)
-		write (fd, "-", 1);
-	if (num >= 10)
-	{
-		ft_putnbr_fd(num / 10, fd);
-		c = num % 10 + '0';
-		write (fd, &c, 1);
-	}
-	else
-	{
-		c = num % 10 + '0';
-		write (fd, &c, 1);
+		next_node = temp->next;
+		ft_lstdelone(temp, del);
+		temp = next_node;
 	}
 }

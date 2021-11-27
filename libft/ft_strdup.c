@@ -32,18 +32,3 @@ char	*ft_strdup(const char *str)
 	arr[len] = '\0';
 	return (arr);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	const char *str = "";
-	char *ptr1 = strdup(str);
-	char *ptr2 = ft_strdup(str);
-	printf("%s\n", ptr1);
-	printf("%s\n", ptr2);
-	free(ptr1);
-	free(ptr2);
-	return 0;
-}
-*/

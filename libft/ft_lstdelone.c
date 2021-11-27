@@ -1,42 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/18 12:35:06 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/18 13:18:08 by youskim          ###   ########.fr       */
+/*   Created: 2021/11/27 13:55:56 by youskim           #+#    #+#             */
+/*   Updated: 2021/11/27 14:31:57 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	unsigned int	num;
-	int				sign;
-	char			c;
-
-	sign = 0;
-	if (n < 0)
-	{
-		sign = 1;
-		num = -n;
-	}
-	else
-		num = n;
-	if (sign == 1)
-		write (fd, "-", 1);
-	if (num >= 10)
-	{
-		ft_putnbr_fd(num / 10, fd);
-		c = num % 10 + '0';
-		write (fd, &c, 1);
-	}
-	else
-	{
-		c = num % 10 + '0';
-		write (fd, &c, 1);
-	}
+	del(lst->content);
+	free(lst);
 }

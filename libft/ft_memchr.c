@@ -29,22 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	
-	const int s[6] = {1, 2, 3, 4, 5, 6};
-	void *k = memchr(s, 2, 4 * 5);
-	void *j = ft_memchr(s, 3, 20);
-	printf("%p\n", k);
-	printf("%p\n", j);
-	
-	const char *s = "123456";
-	char *k = (char *)memchr(s, '2', 1);
-	char *j = (char *)ft_memchr(s, '3', 2);
-	printf("%p\n", k);
-	printf("%p\n", j);
-	return 0;
-}
-*/

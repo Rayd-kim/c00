@@ -6,7 +6,7 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 12:43:25 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/26 18:09:19 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/27 17:48:22 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	temp = *lst;
 	while (temp != NULL)
+	{
+		if (temp->next == NULL)
+		{
+			temp->next = new;
+			new = NULL;
+		}
 		temp = temp->next;
-	temp->next = new;
-	new->next = NULL;
-}	
+	}
+}
