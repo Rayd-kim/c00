@@ -6,11 +6,11 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 13:44:25 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/25 13:00:46 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/29 23:38:08 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *find, size_t n)
 {

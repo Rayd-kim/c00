@@ -6,7 +6,7 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 19:22:36 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/19 20:18:27 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/29 22:10:14 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	k;
 	size_t			i;
 
-	k = c;
+	k = (unsigned char)c;
 	ptr = (unsigned char *)s;
 	i = 0;
 	while (i < n)

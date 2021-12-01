@@ -6,11 +6,11 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 12:22:33 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/19 12:19:59 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/29 18:45:14 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

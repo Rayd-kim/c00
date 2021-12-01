@@ -6,7 +6,7 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 15:06:44 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/27 17:41:25 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/30 22:07:19 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*temp;
-	t_list	*con;
 
-	temp = lst;
-	cont = lst->content;
-
+	temp = lst->next;
+	while (temp != NULL)
+	{
+		f(temp->content);
+		temp = temp->next;
+	}
+}

@@ -6,11 +6,11 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 14:44:49 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/18 23:12:23 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/29 19:09:38 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t size)
 {

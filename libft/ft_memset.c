@@ -6,11 +6,11 @@
 /*   By: youskim <youskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 14:45:05 by youskim           #+#    #+#             */
-/*   Updated: 2021/11/21 21:25:16 by youskim          ###   ########.fr       */
+/*   Updated: 2021/11/29 19:09:16 by youskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t n)
 {
@@ -18,8 +18,8 @@ void	*ft_memset(void *b, int c, size_t n)
 	unsigned char	*str;
 	size_t			i;
 
-	a = c;
-	str = b;
+	a = (unsigned char)c;
+	str = (unsigned char *)b;
 	i = 0;
 	while (i < n)
 	{
