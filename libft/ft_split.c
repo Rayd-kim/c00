@@ -51,6 +51,17 @@ static char	*cut_str(char const *s, int len)
 	return (cut);
 }
 
+static char	**ft_free(char **arr, int count)
+{
+	while (count > 0)
+	{
+		free(arr[count - 1]);
+		count--;
+	}
+	arr = NULL;
+	return (arr);
+}
+
 static char	**ft_split_result(char **arr, char const *s, char c, int count)
 {
 	int	i;
@@ -70,6 +81,8 @@ static char	**ft_split_result(char **arr, char const *s, char c, int count)
 			cycle++;
 		}
 		arr[i] = cut_str(&s[k - cycle], cycle);
+		if (arr[i] == NULL)
+			return (ft_free(arr, i));
 		i++;
 	}
 	arr[i] = NULL;
