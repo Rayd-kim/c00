@@ -58,8 +58,7 @@ static char	**ft_free(char **arr, int count)
 		free(arr[count - 1]);
 		count--;
 	}
-	arr = NULL;
-	return (arr);
+	return (NULL);
 }
 
 static char	**ft_split_result(char **arr, char const *s, char c, int count)
