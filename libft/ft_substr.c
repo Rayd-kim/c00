@@ -12,12 +12,32 @@
 
 #include "libft.h"
 
+static size_t	check_len(char const *s, unsigned int start, size_t len)
+{
+	size_t			k;
+	unsigned int	temp;
+
+	k = 0;
+	temp = start;
+	while (s[temp] != '\0' && start < ft_strlen(s))
+	{
+		temp++;
+		k++;
+	}
+	if (len <= k)
+		return (len);
+	else
+		return (k);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*arr;
 	size_t	i;
+	size_t	k;
 
-	arr = (char *)malloc(sizeof(char) * (len + 1));
+	k = check_len(s, start, len);
+	arr = (char *)malloc(sizeof(char) * (k + 1));
 	if (arr == 0)
 		return (NULL);
 	if (start >= ft_strlen(s))
